@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Hardware</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+    <div class="credentials">
+        Colegiul Național „Petru Rareș” Suceava<br>
+        Proiect de atestat – Arduino
+    </div>
+
+    <div class="teacher-box">
+        Îndrumător: prof. Marius Ududec<br>
+        Absolvent: Petrariu Robert Bogdan <br>
+        Clasa: a XII-a E
+    </div>
+
+    <div class="nav-title">Cuprins</div>
+    <ul class="nav-list">
+        <li><a href="argumentare.html">Argumentare alegere temă</a></li>
+        <li><a href="prezentare.html">Prezentare generală</a></li>
+        <li><a href="istoric.html">Istoricul companiei</a></li>
+        <li><a href="hardware.html">Hardware</a></li>
+        <li><a href="hardware.html#placi">Plăcuțe oficiale</a></li>
+        <li><a href="hardware.html#shielduri">Scuturi (shield-uri)</a></li>
+        <li><a href="software.html">Software</a></li>
+        <li><a href="software.html#legacy">Legacy IDE</a></li>
+        <li><a href="software.html#ide2">IDE 2.0</a></li>
+        <li><a href="software.html#sketch">Sketch</a></li>
+        <li><a href="software.html#blink">Exemplu: Blink</a></li>
+        <li><a href="webografie.html">Webografie</a></li>
+    </ul>
+    </aside>
+
+
+    <!-- Content -->
+    <main class="content">
+        <h1>Hardware</h1>
+
+        <p>
+            Arduino este o platformă de hardware open-source, cu designuri distribuite sub licența Creative Commons Attribution Share-Alike 2.5. Deși hardware-ul și software-ul sunt disponibile gratuit, numele „Arduino” este rezervat produselor oficiale, iar lucrările derivate ar trebui să evite folosirea acestuia fără permisiune. Multe produse compatibile Arduino folosesc denumiri care se termină în „-duino”.
+        </p>
+
+        <p>
+            Plăcile Arduino folosesc, de obicei, microcontrolere Atmel 8-bit AVR (de exemplu, ATmega8, ATmega328, ATmega2560) cu caracteristici variabile. Arduino Due, care folosește microcontrolerul 32-bit Atmel SAM3X8E, a fost introdus în 2012. Plăcile au pini pentru o conectare ușoară la module suplimentare numite shield-uri, care pot fi stivuite și controlate printr-o magistrală serială I²C. Unele plăci, cum ar fi LilyPad , nu au regulator de tensiune din motive de design specific.
+        </p>
+
+        <p>
+            Microcontrolerele Arduino sunt preîncărcate cu un bootloader (de exemplu, Optiboot pentru Arduino Uno) pentru o încărcare ușoară a programelor. Plăcile moderne folosesc cipuri USB-to-serial (de exemplu, FTDI FT232), iar altele folosesc cipuri AVR separate pentru comunicația USB-to-serial. Unele modele, cum ar fi Arduino Mini, folosesc adaptoare detasabile sau Bluetooth pentru programare.
+        </p>
+
+        <p>
+            Plăcile Arduino expun pini I/O pentru circuite externe, iar Arduino Uno oferă 14 pini digitali I/O, dintre care șase pot emite semnale PWM și șase intrări analogice. Există multe plăci compatibile Arduino, cu funcționalități și forme variate, care îmbunătățesc Arduino-ul de bază pentru aplicații educaționale sau robotice. Bibliotecile open-source, precum simbolurile KiCad pentru scheme și footprinturi PCB, ajută la integrarea Arduino în designuri personalizate.
+        </p>
+
+
+        <!-- IMAGE SECTION-->
+        <section class="image-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg" alt="Placă Arduino Uno">
+                <div class="image-caption">
+                    Placă Arduino Uno utilizată în scopuri educaționale
+                </div>
+            </div>
+        </section>
+        <h2 id="placi">Plăcuțe oficiale</h2>
+
+        <p>
+            Hardware-ul original Arduino a fost fabricat de compania italiană Smart Projects. Unele plăci cu marca Arduino au fost proiectate de companiile americane SparkFun Electronics și Adafruit Industries. Pana in 2016, 17 versiuni ale hardware-ului Arduino au fost produse comercial.
+        </p>
+
+        <h2 id="shielduri">Scuturi (shield-uri)</h2>
+
+        <p>
+            Plăcile Arduino și cele compatibile Arduino folosesc plăci de expansiune cu circuite imprimate numite „shield-uri”, care se conectează la conectorii standard de pe placa Arduino. Shield-urile pot oferi control pentru motoare, utilizări în imprimare 3D și alte aplicații, GNSS (navigație prin satelit), Ethernet, afișaje cu cristale lichide (LCD) sau prototipare pe breadboard. Mai multe shield-uri pot fi, de asemenea, realizate de utilizatori în sistem DIY (Do It Yourself).
+        </p>
+         <!-- IMAGE SECTION-->
+        <section class="image-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Multiple_shields_stacked_on_an_Arduino_board.jpg" alt="Stacked shield">
+                <div class="image-caption">
+                    Unele shield-uri dispun de conectori suprapozabili („stacking headers”) care permit montarea mai multor shields unul peste altul pe o placă Arduino. În acest exemplu, un shield de prototipare este suprapus peste două shields de tip Adafruit Motor Shield V2.
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/ARSH-09-DL_03.jpg" alt="ARSH">
+                <div class="image-caption">
+                    Shield-ul Adafruit Datalogging dispune de un slot pentru card Secure Digital (SD) și un cip de ceas în timp real (RTC), precum și de spațiu suplimentar pentru adăugarea de componente și module personalizate.
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Closeup_of_usbhost_shield_with_jumper.JPG" alt="USB host shield">
+                <div class="image-caption">
+                    Un shield USB host care permite unei plăci Arduino să comunice cu un dispozitiv USB, precum o tastatură sau un mouse.
+                </div>
+            </div>
+        </section>
+    </main>
+
+</div>
+
+</body>
+</html>

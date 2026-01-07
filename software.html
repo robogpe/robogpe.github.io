@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Software</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+    <div class="credentials">
+        Colegiul Național „Petru Rareș” Suceava<br>
+        Proiect de atestat – Arduino
+    </div>
+
+    <div class="teacher-box">
+        Îndrumător: prof. Marius Ududec<br>
+        Absolvent: Petrariu Robert Bogdan <br>
+        Clasa: a XII-a E
+    </div>
+
+    <div class="nav-title">Cuprins</div>
+    <ul class="nav-list">
+        <li><a href="argumentare.html">Argumentare alegere temă</a></li>
+        <li><a href="prezentare.html">Prezentare generală</a></li>
+        <li><a href="istoric.html">Istoricul companiei</a></li>
+        <li><a href="hardware.html">Hardware</a></li>
+        <li><a href="hardware.html#placi">Plăcuțe oficiale</a></li>
+        <li><a href="hardware.html#shielduri">Scuturi (shield-uri)</a></li>
+        <li><a href="software.html">Software</a></li>
+        <li><a href="software.html#legacy">Legacy IDE</a></li>
+        <li><a href="software.html#ide2">IDE 2.0</a></li>
+        <li><a href="software.html#sketch">Sketch</a></li>
+        <li><a href="software.html#blink">Exemplu: Blink</a></li>
+        <li><a href="webografie.html">Webografie</a></li>
+    </ul>
+    </aside>
+
+
+    <!-- Content -->
+    <main class="content">
+        <h1>Software</h1>
+        <h2 id="legacy">Legacy IDE</h2>
+        <p>
+            Mediul integrat de dezvoltare Arduino (Arduino IDE) este o aplicație multiplatformă (Windows, macOS, Linux), bazată pe Processing IDE și scrisă în Java. Folosește API-ul Wiring ca stil de programare și include un editor de cod cu funcții precum evidențierea sintaxei, indentare automată, căutare și înlocuire, precum și butoane pentru compilarea și încărcarea rapidă a programelor pe plăci Arduino. Codul sursă al IDE-ului este disponibil sub licența GNU GPL v2.
+        </p>
+
+        <p>
+            Arduino IDE acceptă limbajele C și C++, oferind o bibliotecă software din proiectul Wiring pentru funcții comune de intrare/ieșire. Programele includ doar două funcții principale — inițializarea și bucla principală — care sunt compilate cu suita GNU toolchain. Programul avrdude convertește codul executabil într-un fișier hexadecimal încărcat ulterior în placa Arduino. Inițial dedicat plăcilor Atmel AVR, IDE-ul este acum compatibil și cu alte platforme precum PIC, STM32, TI MSP430 și ESP32.
+        </p>
+        <!-- IMAGE SECTION-->
+        <section class="image-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Arduino_IDE_-_Blink.png" alt="UI Legacy">
+                <div class="image-caption">
+                    Legacy IDE conținând codul pentru funcția Blink
+                </div>
+            </div>
+        </section>
+        <h2 id="ide2">IDE 2.0</h2>
+        <p>
+            O versiune alfa a noului Arduino IDE a fost lansată pe 18 octombrie 2019 sub numele Arduino Pro IDE, urmată de versiunea beta pe 1 martie 2021, redenumită IDE 2.0. Versiunea stabilă a fost publicată pe 14 septembrie 2022.
+        </p>
+
+        <p>
+            Noul IDE folosește în continuare Arduino CLI, dar aduce un mediu de dezvoltare modern, completare automată și o interfață bazată pe Eclipse Theia. Printre noile funcții se numără: manageri noi pentru plăci și biblioteci, explorator de proiecte, verificare a sintaxei, monitor serial cu grafic, mod întunecat, versiune pe 64 de biți și funcționalitate de depanare (debugging).
+        </p>
+
+        <p>
+            Depanarea permite execuție pas cu pas, breakpoints și vizualizarea memoriei, necesitând un cip și o sondă de debug. Placa Arduino Zero oferă suport nativ, iar alte plăci, precum cele SAMD21, pot fi depanate cu dispozitive precum SEGGER J-Link sau Atmel-ICE. IDE-ul 2.0 permite și depanarea plăcilor terțe compatibile cu GDB și OPENOCD, inclusiv modele bazate pe ATMega328P și CH32 RISC-V.
+        </p>
+        <!-- IMAGE SECTION-->
+        <section class="image-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Arduino-IDE-2x-Blink.png" alt="UI IDE 2.0">
+                <div class="image-caption">
+                    IDE 2.0 conținând codul pentru funcția Blink
+                </div>
+            </div>
+        </section>
+        <h2 id="sketch">Sketch</h2>
+        <p>
+            O schiță (sketch) este un program scris în mediul Arduino IDE. Schițele sunt salvate pe calculatorul de dezvoltare ca fișiere text cu extensia .ino, iar versiunile mai vechi ale IDE-ului (anterioare 1.0) foloseau extensia .pde.
+        </p>
+
+        <p>
+            Un program minimal în C/C++ pentru Arduino conține doar două funcții principale:
+            <ul>
+            <li>setup() – este apelată o singură dată, la pornirea sau resetarea plăcii. Aceasta inițializează variabilele, modurile pinilor de intrare/ieșire și bibliotecile necesare, fiind echivalentă cu funcția main().</li>
+            <br>
+            <li>loop() – rulează în mod repetat după finalizarea funcției setup(), controlând funcționarea plăcii până la oprire sau resetare. Este similară cu o buclă while(1).</li>
+            </ul>
+        </p>
+
+
+
+        <h2 id="blink">Exemplu: Blink</h2>
+        <p>
+            Arduino este o platformă de hardware open-source, cu designuri distribuite sub licența Creative Commons Attribution Share-Alike 2.5. Deși hardware-ul și software-ul sunt disponibile gratuit, numele „Arduino” este rezervat produselor oficiale, iar lucrările derivate ar trebui să evite folosirea acestuia fără permisiune. Multe produse compatibile Arduino folosesc denumiri care se termină în „-duino”.
+        </p>
+
+        <p>
+            Plăcile Arduino folosesc, de obicei, microcontrolere Atmel 8-bit AVR (de exemplu, ATmega8, ATmega328, ATmega2560) cu caracteristici variabile. Arduino Due, care folosește microcontrolerul 32-bit Atmel SAM3X8E, a fost introdus în 2012. Plăcile au pini pentru o conectare ușoară la module suplimentare numite shield-uri, care pot fi stivuite și controlate printr-o magistrală serială I²C. Unele plăci, cum ar fi LilyPad , nu au regulator de tensiune din motive de design specific.
+        </p>
+
+        <!-- IMAGE SECTION-->
+        <section class="image-section">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Power_and_Pin13_LED_on_Arduino_Compatible_Board.jpg" alt="Placă cu codul pentru Blink">
+                <div class="image-caption">
+                    Placă folosind funcția Blink
+                </div>
+            </div>
+        </section>
+    </main>
+
+</div>
+
+</body>
+</html>
